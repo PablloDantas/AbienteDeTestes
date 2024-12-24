@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AX1w/sW/pdg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pabllo Dantas\\RiderProjects\\AmbienteDeTestes\\AmbienteDeTestes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pabllo Dantas\\.nuget\\packages\\consoletables\\2.6.2\\consoletables.2.6.2.nupkg.sha512",
+    "C:\\Users\\Pabllo Dantas\\.nuget\\packages\\wcwidth\\1.0.0\\wcwidth.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

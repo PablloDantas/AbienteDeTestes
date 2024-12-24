@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType> <!-- Indica que o aplicativo é gráfico -->
+        <TargetFramework>net8.0-windows</TargetFramework> <!-- Framework com suporte ao Windows -->
+        <UseWindowsForms>true</UseWindowsForms> <!-- Ativa o suporte ao Windows Forms -->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ConsoleTables" Version="2.6.2"/>
+    </ItemGroup>
+
+</Project>
