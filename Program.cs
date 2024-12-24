@@ -15,6 +15,7 @@ namespace AmbienteDeTestes
     {
         static void Main(string[] args)
         {
+            // Inicializa circuitos com suas cargas e número de fases
             Circuito chu1 = new Circuito("Chuveiro 01", 6000, 2);
             Circuito chu2 = new Circuito("Chuveiro 02", 5000, 2);
             Circuito tug = new Circuito("Tomada de uso geral", 5000, 1);
@@ -22,16 +23,22 @@ namespace AmbienteDeTestes
             Circuito ilu = new Circuito("Iluminação", 2000, 1);
             Circuito mb = new Circuito("Motobomba", 6000, 3);
 
+            // Adiciona os circuitos a uma lista
             List<Circuito> circuitos = new List<Circuito> { chu1, chu2, tue, tug, ilu, mb };
 
+            // Cria um quadro e distribui as fases
             Quadro qd1 = new Quadro("QD1", circuitos);
+            qd1.DistribuirCircuitos();
 
-            qd1.DistribuirFases();
+            // Exibe a tabela
             qd1.ExibirTabela();
             qd1.ExibirTabelaEmJanela();
         }
     }
 
+    /// <summary>
+    /// Representa um circuito elétrico.
+    /// </summary>
     public class Circuito
     {
         public string Nome { get; set; }
@@ -40,6 +47,9 @@ namespace AmbienteDeTestes
 
         private List<int>? _listaDeCargas;
 
+        /// <summary>
+        /// Obtém a lista de cargas distribuídas entre as fases do circuito.
+        /// </summary>
         public List<int> ListaDeCargas
         {
             get
@@ -58,6 +68,12 @@ namespace AmbienteDeTestes
             }
         }
 
+        /// <summary>
+        /// Construtor do circuito.
+        /// </summary>
+        /// <param name="nome">Nome do circuito.</param>
+        /// <param name="cargaTotal">Carga total em watts.</param>
+        /// <param name="quantidadeDeFases">Número de fases do circuito.</param>
         public Circuito(string nome, int cargaTotal, int quantidadeDeFases)
         {
             Nome = nome;
@@ -66,12 +82,20 @@ namespace AmbienteDeTestes
         }
     }
 
+    /// <summary>
+    /// Representa um quadro elétrico.
+    /// </summary>
     public class Quadro
     {
         public string Nome { get; set; }
         public List<Circuito> Circuitos { get; set; }
         public DataTable TabelaDeCircuitos { get; set; }
 
+        /// <summary>
+        /// Construtor do quadro.
+        /// </summary>
+        /// <param name="nome">Nome do quadro.</param>
+        /// <param name="circuitos">Lista de circuitos a serem distribuídos no quadro.</param>
         public Quadro(string nome, List<Circuito> circuitos)
         {
             Nome = nome;
@@ -89,14 +113,18 @@ namespace AmbienteDeTestes
             };
         }
 
-        public void DistribuirFases()
+        /// <summary>
+        /// Distribui os circuitos entre as fases R, S e T, buscando equilibrar as cargas.
+        /// </summary>
+        public void DistribuirCircuitos()
         {
+            // Ordena os circuitos por número de fases e carga total
             var listaDeCircuitosOrdenados = Circuitos
                 .OrderByDescending(x => x.ListaDeCargas.Count)
                 .ThenByDescending(x => x.ListaDeCargas.Sum())
                 .ToList();
 
-            // Listas que representam as fases R, S e T
+            // Inicializa listas para representar as fases
             List<int> faseR = new List<int>();
             List<int> faseS = new List<int>();
             List<int> faseT = new List<int>();
@@ -106,7 +134,6 @@ namespace AmbienteDeTestes
             // Agrupamentos das fases
             List<List<int>> fases = new List<List<int>> { faseR, faseS, faseT };
 
-            // Processa cada circuito da lista ordenada
             for (int i = 0; i < listaDeCircuitosOrdenados.Count; i++)
             {
                 Circuito circuito = listaDeCircuitosOrdenados[i]; // Circuito atual
@@ -168,6 +195,7 @@ namespace AmbienteDeTestes
                 }
             }
 
+            // Popula a tabela
             for (int i = 0; i < circuitos.Count; i++)
             {
                 TabelaDeCircuitos.Rows.Add(
@@ -180,6 +208,9 @@ namespace AmbienteDeTestes
             }
         }
 
+        /// <summary>
+        /// Exibe a tabela no console.
+        /// </summary>
         public void ExibirTabela()
         {
             var consoleTable = new ConsoleTable();
@@ -208,6 +239,9 @@ namespace AmbienteDeTestes
             consoleTable.Write(Format.Alternative);
         }
 
+        /// <summary>
+        /// Exibe a tabela em uma janela usando Windows Forms.
+        /// </summary>
         public void ExibirTabelaEmJanela()
         {
             // Calcula os totais das colunas R, S e T

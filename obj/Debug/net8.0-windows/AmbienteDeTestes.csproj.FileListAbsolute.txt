@@ -1,8 +1,3 @@
-C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.csproj.AssemblyReference.cache
-C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.AssemblyInfoInputs.cache
-C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.AssemblyInfo.cs
-C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.csproj.CoreCompileInputs.cache
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\AmbienteDeTestes.exe
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\AmbienteDeTestes.deps.json
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\AmbienteDeTestes.runtimeconfig.json
@@ -10,6 +5,12 @@ C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\A
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\AmbienteDeTestes.pdb
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\ConsoleTables.dll
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\bin\Debug\net8.0-windows\Wcwidth.dll
+C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.csproj.AssemblyReference.cache
+C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.AssemblyInfoInputs.cache
+C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.AssemblyInfo.cs
+C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.csproj.CoreCompileInputs.cache
+C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.sourcelink.json
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\Ambiente.00F909F4.Up2Date
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\AmbienteDeTestes.dll
 C:\Users\Pabllo Dantas\RiderProjects\AmbienteDeTestes\obj\Debug\net8.0-windows\refint\AmbienteDeTestes.dll
